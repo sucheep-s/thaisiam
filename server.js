@@ -24,11 +24,20 @@ server.views({
 
 server.route({
     method: 'GET',
-    path: '/',
+    path: '/' ,
     handler: function (request, reply) {
         reply.view('index');
     }
 });
+
+server.route({
+    method: 'GET',
+    path: '/index' ,
+    handler: function (request, reply) {
+        reply.view('index');
+    }
+});
+
 server.route({
     method: 'GET',
     path: '/contact',
