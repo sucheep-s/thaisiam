@@ -21,7 +21,51 @@ server.views({
     },
     path: Path.join(__dirname, 'views')
 });
+/*****************Admin************/
+server.route({
+    method: 'GET',
+    path: '/login' ,
+    handler: function (request, reply) {
+        reply.view('login');
+    }
+});
+server.route({
+    method: 'GET',
+    path: '/admin' ,
+    handler: function (request, reply) {
+        reply.view('admin');
+    }
+});
+server.route({
+    method: 'GET',
+    path: '/adminaboutus' ,
+    handler: function (request, reply) {
+        reply.view('adminaboutus');
+    }
+});
+server.route({
+    method: 'GET',
+    path: '/adminproduct' ,
+    handler: function (request, reply) {
+        reply.view('adminproduct');
+    }
+});
+server.route({
+    method: 'GET',
+    path: '/adminuser' ,
+    handler: function (request, reply) {
+        reply.view('adminuser');
+    }
+});
+server.route({
+    method: 'GET',
+    path: '/aboutus' ,
+    handler: function (request, reply) {
+        reply.view('aboutus');
+    }
+});
 
+/*****************Front************/
 server.route({
     method: 'GET',
     path: '/' ,
@@ -35,7 +79,7 @@ server.route({
     path: '/index' ,
     handler: function (request, reply) {
         reply.view('index');
-    }
+    }   
 });
 
 server.route({
@@ -45,7 +89,20 @@ server.route({
         reply.view('contact');
     }
 });
-
+server.route({
+    method: 'GET',
+    path: '/product',
+    handler: function (request, reply) {
+        reply.view('product');
+    }
+});
+server.route({
+    method: 'GET',
+    path: '/productdetail',
+    handler: function (request, reply) {
+        reply.view('productdetail');
+    }
+});
 
 server.register({
     register: Good,
